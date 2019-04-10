@@ -1,0 +1,17 @@
+.van-swipe__indicator{
+  width:8px!important;
+  height:8px!important;
+}
+
+.van-search{
+  padding: $common-pd 0 $common-pd $common-pd !important;
+  background: #fff !important;
+  .van-cell.van-field{
+    background-color: #f3f3f3;
+  }
+  .van-field__body{
+    height: 100%!important;
+    font-size:16px;
+  }
+}
+

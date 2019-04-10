@@ -1,0 +1,26 @@
+/** 全局变量 */
+@import './variables.scss';
+
+html,body {
+  background: #f5f7f9;
+}
+body{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Anyway Type','Myriad Pro','PingFang SC','Microsoft YaHei',sans-serif;
+  color: #333;
+  line-height: 1;
+}
+
+/** 字体模块*/
+@import './font.scss';
+
+/** 通用模块*/
+@import './common.scss';
+
+/** vant重写模块 */
+@import './vant.fix.scss';
+
+/** 自定义组件模块 */
+@import './assembly.scss';

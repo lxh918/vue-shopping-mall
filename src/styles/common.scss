@@ -1,0 +1,85 @@
+@each $tp,$tpm in (pd,padding),(mg,margin){
+  @each $item in ('',l,r,lr,t,b,tb){
+    .n#{$tp}#{$item} {
+      @if $item == ''{
+        #{$tpm}:0!important;
+      }
+      @else if $item == l {
+        #{$tpm}-left:0!important;
+      }
+      @else if $item == r {
+        #{$tpm}-right:0!important;
+      }
+      @else if $item == lr {
+        #{$tpm}-left:0!important;
+        #{$tpm}-right:0!important;
+      }
+      @else if $item == t {
+        #{$tpm}-top:0!important;
+      }
+      @else if $item == b {
+        #{$tpm}-bottom:0!important;
+      }
+      @else if $item == tb {
+        #{$tpm}-top:0!important;
+        #{$tpm}-bottom:0!important;
+      }
+    }
+  }
+  @each $item in ('',l,r,lr,t,b,tb){
+    @each $number,$name in ($size-name-map){
+      .#{$tp}#{$item}#{$name} { 
+        @if $item == ''{
+          #{$tpm}:#{$number}px!important;
+        }
+        @else if $item == l {
+          #{$tpm}-left:#{$number}px!important;
+        }
+        @else if $item == r {
+          #{$tpm}-right:#{$number}px!important;
+        }
+        @else if $item == lr {
+          #{$tpm}-left:#{$number}px!important;
+          #{$tpm}-right:#{$number}px!important;
+        }
+        @else if $item == t {
+          #{$tpm}-top:#{$number}px!important;
+        }
+        @else if $item == b {
+          #{$tpm}-bottom:#{$number}px!important;
+        }
+        @else if $item == tb {
+          #{$tpm}-top:#{$number}px!important;
+          #{$tpm}-bottom:#{$number}px!important;
+        }
+      }
+    }
+  }
+}
+
+@each $item in left, right, center {
+  .text-#{$item} {
+    text-align: $item!important;
+  }
+}
+
+.auto-height{
+  height:auto!important;
+  min-height: unset!important;
+}
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  visibility:hidden;
+  clear:both;
+}
+.clearfix {
+  zoom:1;
+}
+.nbg{
+  background:transparent!important;
+}
+a{
+  color: #333;
+}
